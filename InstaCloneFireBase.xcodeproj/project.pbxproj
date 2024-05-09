@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D8EECC5C7136172A852A20A /* Pods_InstaCloneFireBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EE98D72F99265F28EFC80E /* Pods_InstaCloneFireBase.framework */; };
+		F5776EBC2BEA31BF00C07002 /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5776EBB2BEA31BF00C07002 /* SecondPage.swift */; };
+		F5776EBE2BEA32F500C07002 /* SignPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5776EBD2BEA32F500C07002 /* SignPage.swift */; };
+		F5998E362BE9009B00662FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5998E352BE9009B00662FCE /* AppDelegate.swift */; };
+		F5998E382BE9009B00662FCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5998E372BE9009B00662FCE /* SceneDelegate.swift */; };
+		F5998E3A2BE9009B00662FCE /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5998E392BE9009B00662FCE /* HomePage.swift */; };
+		F5998E3F2BE9009C00662FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5998E3E2BE9009C00662FCE /* Assets.xcassets */; };
+		F5998E422BE9009C00662FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5998E402BE9009C00662FCE /* LaunchScreen.storyboard */; };
+		F5998E4C2BE9040400662FCE /* FourPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5998E4B2BE9040400662FCE /* FourPage.swift */; };
+		F5998E4E2BE910FA00662FCE /* FivePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5998E4D2BE910FA00662FCE /* FivePage.swift */; };
+		F5CD3EEF2BEB8DBC00E6ED3C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EEE2BEB8DBC00E6ED3C /* Repo.swift */; };
+		F5CD3EF22BEB8EA400E6ED3C /* SigninVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF12BEB8EA400E6ED3C /* SigninVM.swift */; };
+		F5CD3EF42BEB90B400E6ED3C /* ThirdPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF32BEB90B400E6ED3C /* ThirdPage.swift */; };
+		F5CD3EF72BEB968A00E6ED3C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF62BEB968A00E6ED3C /* Cell.swift */; };
+		F5FECF982BECB34D00B15C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5FECF972BECB34D00B15C39 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08EE98D72F99265F28EFC80E /* Pods_InstaCloneFireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaCloneFireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A87B99786EA7FC2290A079 /* Pods-InstaCloneFireBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaCloneFireBase.debug.xcconfig"; path = "Target Support Files/Pods-InstaCloneFireBase/Pods-InstaCloneFireBase.debug.xcconfig"; sourceTree = "<group>"; };
+		E3B37755C964690E27D3BD59 /* Pods-InstaCloneFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaCloneFireBase.release.xcconfig"; path = "Target Support Files/Pods-InstaCloneFireBase/Pods-InstaCloneFireBase.release.xcconfig"; sourceTree = "<group>"; };
+		F5776EBB2BEA31BF00C07002 /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
+		F5776EBD2BEA32F500C07002 /* SignPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPage.swift; sourceTree = "<group>"; };
+		F5998E322BE9009B00662FCE /* InstaCloneFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCloneFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5998E352BE9009B00662FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5998E372BE9009B00662FCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F5998E392BE9009B00662FCE /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		F5998E3E2BE9009C00662FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5998E412BE9009C00662FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5998E432BE9009C00662FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5998E4B2BE9040400662FCE /* FourPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPage.swift; sourceTree = "<group>"; };
+		F5998E4D2BE910FA00662FCE /* FivePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivePage.swift; sourceTree = "<group>"; };
+		F5CD3EEE2BEB8DBC00E6ED3C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		F5CD3EF12BEB8EA400E6ED3C /* SigninVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVM.swift; sourceTree = "<group>"; };
+		F5CD3EF32BEB90B400E6ED3C /* ThirdPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPage.swift; sourceTree = "<group>"; };
+		F5CD3EF62BEB968A00E6ED3C /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		F5FECF972BECB34D00B15C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5998E2F2BE9009B00662FCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8EECC5C7136172A852A20A /* Pods_InstaCloneFireBase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB465F7E57D0D25B44FC80C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08EE98D72F99265F28EFC80E /* Pods_InstaCloneFireBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5998E292BE9009B00662FCE = {
+			isa = PBXGroup;
+			children = (
+				F5998E342BE9009B00662FCE /* InstaCloneFireBase */,
+				F5998E332BE9009B00662FCE /* Products */,
+				FC0E336571AC352C0289A88B /* Pods */,
+				AB465F7E57D0D25B44FC80C3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F5998E332BE9009B00662FCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5998E322BE9009B00662FCE /* InstaCloneFireBase.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5998E342BE9009B00662FCE /* InstaCloneFireBase */ = {
+			isa = PBXGroup;
+			children = (
+				F5998E352BE9009B00662FCE /* AppDelegate.swift */,
+				F5998E372BE9009B00662FCE /* SceneDelegate.swift */,
+				F5CD3EEC2BEB8D8600E6ED3C /* ViewControllers */,
+				F5CD3EF02BEB8E7700E6ED3C /* ViewModels */,
+				F5CD3EF52BEB966A00E6ED3C /* Cell */,
+				F5CD3EED2BEB8D9C00E6ED3C /* Repository */,
+				F5998E3E2BE9009C00662FCE /* Assets.xcassets */,
+				F5998E402BE9009C00662FCE /* LaunchScreen.storyboard */,
+				F5998E432BE9009C00662FCE /* Info.plist */,
+				F5FECF972BECB34D00B15C39 /* GoogleService-Info.plist */,
+			);
+			path = InstaCloneFireBase;
+			sourceTree = "<group>";
+		};
+		F5CD3EEC2BEB8D8600E6ED3C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5776EBD2BEA32F500C07002 /* SignPage.swift */,
+				F5998E392BE9009B00662FCE /* HomePage.swift */,
+				F5776EBB2BEA31BF00C07002 /* SecondPage.swift */,
+				F5CD3EF32BEB90B400E6ED3C /* ThirdPage.swift */,
+				F5998E4B2BE9040400662FCE /* FourPage.swift */,
+				F5998E4D2BE910FA00662FCE /* FivePage.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F5CD3EED2BEB8D9C00E6ED3C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD3EEE2BEB8DBC00E6ED3C /* Repo.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F5CD3EF02BEB8E7700E6ED3C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD3EF12BEB8EA400E6ED3C /* SigninVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F5CD3EF52BEB966A00E6ED3C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F5CD3EF62BEB968A00E6ED3C /* Cell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FC0E336571AC352C0289A88B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1A87B99786EA7FC2290A079 /* Pods-InstaCloneFireBase.debug.xcconfig */,
+				E3B37755C964690E27D3BD59 /* Pods-InstaCloneFireBase.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5998E312BE9009B00662FCE /* InstaCloneFireBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5998E462BE9009C00662FCE /* Build configuration list for PBXNativeTarget "InstaCloneFireBase" */;
+			buildPhases = (
+				92A7D6100F00C3A872D079E7 /* [CP] Check Pods Manifest.lock */,
+				F5998E2E2BE9009B00662FCE /* Sources */,
+				F5998E2F2BE9009B00662FCE /* Frameworks */,
+				F5998E302BE9009B00662FCE /* Resources */,
+				9D79CC78432F326B530C94C6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstaCloneFireBase;
+			productName = InstaCloneFireBase;
+			productReference = F5998E322BE9009B00662FCE /* InstaCloneFireBase.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5998E2A2BE9009B00662FCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					F5998E312BE9009B00662FCE = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = F5998E2D2BE9009B00662FCE /* Build configuration list for PBXProject "InstaCloneFireBase" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5998E292BE9009B00662FCE;
+			productRefGroup = F5998E332BE9009B00662FCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5998E312BE9009B00662FCE /* InstaCloneFireBase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5998E302BE9009B00662FCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5998E422BE9009C00662FCE /* LaunchScreen.storyboard in Resources */,
+				F5998E3F2BE9009C00662FCE /* Assets.xcassets in Resources */,
+				F5FECF982BECB34D00B15C39 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92A7D6100F00C3A872D079E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaCloneFireBase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D79CC78432F326B530C94C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaCloneFireBase/Pods-InstaCloneFireBase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaCloneFireBase/Pods-InstaCloneFireBase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaCloneFireBase/Pods-InstaCloneFireBase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5998E2E2BE9009B00662FCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5776EBC2BEA31BF00C07002 /* SecondPage.swift in Sources */,
+				F5998E3A2BE9009B00662FCE /* HomePage.swift in Sources */,
+				F5998E4E2BE910FA00662FCE /* FivePage.swift in Sources */,
+				F5CD3EEF2BEB8DBC00E6ED3C /* Repo.swift in Sources */,
+				F5CD3EF42BEB90B400E6ED3C /* ThirdPage.swift in Sources */,
+				F5CD3EF22BEB8EA400E6ED3C /* SigninVM.swift in Sources */,
+				F5998E4C2BE9040400662FCE /* FourPage.swift in Sources */,
+				F5998E362BE9009B00662FCE /* AppDelegate.swift in Sources */,
+				F5CD3EF72BEB968A00E6ED3C /* Cell.swift in Sources */,
+				F5998E382BE9009B00662FCE /* SceneDelegate.swift in Sources */,
+				F5776EBE2BEA32F500C07002 /* SignPage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5998E402BE9009C00662FCE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5998E412BE9009C00662FCE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5998E442BE9009C00662FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5998E452BE9009C00662FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5998E472BE9009C00662FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1A87B99786EA7FC2290A079 /* Pods-InstaCloneFireBase.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C7ARWWDA2H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InstaCloneFireBase/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zcnzdmr.InstaCloneFireBase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5998E482BE9009C00662FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3B37755C964690E27D3BD59 /* Pods-InstaCloneFireBase.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C7ARWWDA2H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InstaCloneFireBase/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zcnzdmr.InstaCloneFireBase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5998E2D2BE9009B00662FCE /* Build configuration list for PBXProject "InstaCloneFireBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5998E442BE9009C00662FCE /* Debug */,
+				F5998E452BE9009C00662FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5998E462BE9009C00662FCE /* Build configuration list for PBXNativeTarget "InstaCloneFireBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5998E472BE9009C00662FCE /* Debug */,
+				F5998E482BE9009C00662FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5998E2A2BE9009B00662FCE /* Project object */;
+}
