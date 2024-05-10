@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class ThirdPage: UIViewController {
     
@@ -51,9 +52,50 @@ class ThirdPage: UIViewController {
         imageViewm.addGestureRecognizer(gR)
     }
     
-    @objc func upLoadPhoto() {
-        print("saa")
+    func alertt(title:String,message:String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        let ok = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default)
+        alert.addAction(ok)
+        
+        present(alert, animated: true)
     }
+    
+    @objc func upLoadPhoto() {
+        
+        let storage = Storage.storage()
+        let reference = storage.reference()
+        let mediaFolder = reference.child("media")
+        let uuid = UUID().uuidString
+        
+        if let photo = imageViewm.image?.pngData() {
+            
+            let imageReference = mediaFolder.child("\(uuid).jpg")
+            imageReference.putData(photo, metadata: nil) { (metadata, error) in
+                
+                if error != nil {
+                    self.alertt(title: "Error", message: error?.localizedDescription ?? "kayit hatasi")
+                }else{
+                    
+                    imageReference.downloadURL { url, error in
+                        if error != nil {
+                            self.alertt(title: "Error", message: error?.localizedDescription ?? "Url alma hatasi")
+                        }else{
+                            if let imageUrl = url?.absoluteString {
+                                print(imageUrl)
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+        
+    }
+    
+    
 }
 
 extension ThirdPage : UIImagePickerControllerDelegate, UINavigationControllerDelegate {

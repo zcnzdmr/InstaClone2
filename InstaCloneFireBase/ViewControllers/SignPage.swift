@@ -26,6 +26,10 @@ class SignPage: UIViewController {
         currentUserFonk()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+// buraya tabbarı kaybetmek için kod yazılabilir
+    }
+    
     func currentUserFonk() {
         let currentUser = Auth.auth().currentUser
         if currentUser != nil {
