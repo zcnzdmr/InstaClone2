@@ -8,6 +8,8 @@ target 'InstaCloneFireBase' do
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'FirebaseStorage'
+pod "KingfisherWebP"
+pod "SDWebImage"
 
   # Pods for InstaCloneFireBase
 

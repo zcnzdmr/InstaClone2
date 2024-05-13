@@ -7,10 +7,12 @@
 
 import UIKit
 import FirebaseFirestore
+import SDWebImage
 
 class HomePage: UIViewController {
     
     var tableView = UITableView()
+    
     var userEmailArray = [String]()
     var userCommentArray = [String]()
     var likeArray = [Int]()
@@ -35,6 +37,7 @@ class HomePage: UIViewController {
       func setupUI(){
 //        view.backgroundColor = .white
           navigationItem.title = "Instagram Clone"
+          navigationItem.titleView?.tintColor = UIColor.systemOrange
           tableView.frame = view.bounds
           tableView.rowHeight = CGFloat(350)
           tableView.delegate = self
@@ -52,14 +55,19 @@ class HomePage: UIViewController {
     func getDataFromFireStore() {
         
         let db = Firestore.firestore()
-        db.collection("Posts").addSnapshotListener { snapShot, error in
+        db.collection("Posts").order(by: "date", descending: true).addSnapshotListener { snapShot, error in
             if error != nil {
                 print(error?.localizedDescription ?? "record pulling error")
             }else{
                 if snapShot?.isEmpty != true {
                     
+                    self.userEmailArray.removeAll()
+                    self.likeArray.removeAll()
+                    self.userImageArray.removeAll()
+                    self.userCommentArray.removeAll()
+                    
                     for document in snapShot!.documents {
-                        let documentID = document.documentID
+//                        let documentID = document.documentID
                         
                         if let postedBy = document.get("postedBy") as? String {
                             self.userEmailArray.append(postedBy)
@@ -72,6 +80,9 @@ class HomePage: UIViewController {
 //                        }
                         if let imageUrl = document.get("imageUrl") as? String {
                             self.userImageArray.append(imageUrl)
+                        }
+                        if let like = document.get("like") as? Int {
+                            self.likeArray.append(like)
                         }
                         
                     }
@@ -90,9 +101,17 @@ extension HomePage : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "hucrem", for: indexPath) as! Cell
         
-        cell.imageViewm.image = UIImage(named: "aa")
-//        cell.label3.text = self.likeArray[indexPath.row]
+        cell.imageViewm.image = UIImage(named: "_")
+        cell.label3.text = String(self.likeArray[indexPath.row])
         cell.label1.text = userEmailArray[indexPath.row]
+        cell.label2.text = " \(userCommentArray[indexPath.row])"
+        
+        if let url = URL(string: self.userImageArray[indexPath.row]) {
+            DispatchQueue.main.async {
+                cell.imageViewm.sd_setImage(with: url)
+
+            }
+        }
         
         return cell
     }
