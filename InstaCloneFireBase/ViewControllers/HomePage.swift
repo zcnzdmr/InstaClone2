@@ -17,6 +17,7 @@ class HomePage: UIViewController {
     var userCommentArray = [String]()
     var likeArray = [Int]()
     var userImageArray = [String]()
+    var documentIDArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,9 +66,11 @@ class HomePage: UIViewController {
                     self.likeArray.removeAll()
                     self.userImageArray.removeAll()
                     self.userCommentArray.removeAll()
+                    self.documentIDArray.removeAll()
                     
                     for document in snapShot!.documents {
-//                        let documentID = document.documentID
+                        let documentID = document.documentID
+                        self.documentIDArray.append(documentID)
                         
                         if let postedBy = document.get("postedBy") as? String {
                             self.userEmailArray.append(postedBy)
@@ -94,7 +97,16 @@ class HomePage: UIViewController {
     }
 }
 
-extension HomePage : UITableViewDelegate, UITableViewDataSource {
+extension HomePage : UITableViewDelegate, UITableViewDataSource, HucreProtokol {
+    
+    func tiklandi(indexPath: IndexPath) {
+        let likeCount = likeArray[indexPath.row]
+        let db = Firestore.firestore()
+        let likeStore : [String:Any] = ["like" : likeCount+1]
+        db.collection("Posts").document(documentIDArray[indexPath.row]).setData(likeStore, merge: true)
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userEmailArray.count
     }
@@ -105,6 +117,9 @@ extension HomePage : UITableViewDelegate, UITableViewDataSource {
         cell.label3.text = String(self.likeArray[indexPath.row])
         cell.label1.text = userEmailArray[indexPath.row]
         cell.label2.text = " \(userCommentArray[indexPath.row])"
+        
+        cell.protokolNesnesi = self
+        cell.indexNesnesi = indexPath
         
         if let url = URL(string: self.userImageArray[indexPath.row]) {
             DispatchQueue.main.async {
@@ -119,4 +134,6 @@ extension HomePage : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
 }
+

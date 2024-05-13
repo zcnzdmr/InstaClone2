@@ -7,11 +7,14 @@
 
 import UIKit
 
-protocol likeClick {
+protocol HucreProtokol {
     func tiklandi(indexPath:IndexPath)
 }
 
 class Cell: UITableViewCell {
+    
+    var protokolNesnesi : HucreProtokol?
+    var indexNesnesi : IndexPath?
     
     var imageViewm = UIImageView()
     var imageProfile = UIImageView()
@@ -103,7 +106,7 @@ class Cell: UITableViewCell {
     }
     
     @objc func likeFonk() {
-        print("like clicked")
+        protokolNesnesi?.tiklandi(indexPath: indexNesnesi!)
     }
     
     //buton basma efekti fonksiyonları
