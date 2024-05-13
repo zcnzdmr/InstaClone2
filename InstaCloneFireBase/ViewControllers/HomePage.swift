@@ -53,6 +53,8 @@ class HomePage: UIViewController {
         tabBarController?.selectedIndex = 3
       }
     
+    //Firestore veritabanından verileri field alanlarına göre çekme kısmı
+    
     func getDataFromFireStore() {
         
         let db = Firestore.firestore()
@@ -78,9 +80,6 @@ class HomePage: UIViewController {
                         if let comment = document.get("comment") as? String {
                             self.userCommentArray.append(comment)
                         }
-//                        if let date = document.get("date") as? String {
-//                            self.d.append(date)
-//                        }
                         if let imageUrl = document.get("imageUrl") as? String {
                             self.userImageArray.append(imageUrl)
                         }
@@ -103,6 +102,8 @@ extension HomePage : UITableViewDelegate, UITableViewDataSource, HucreProtokol {
         let likeCount = likeArray[indexPath.row]
         let db = Firestore.firestore()
         let likeStore : [String:Any] = ["like" : likeCount+1]
+        
+        //burda FireStore veritabanında ki like field'ini setData ( .. merge : true) ile güncelliyoruz.
         db.collection("Posts").document(documentIDArray[indexPath.row]).setData(likeStore, merge: true)
         
     }

@@ -20,6 +20,7 @@ class SecondPage: UIViewController {
     }
     
     func setUpUIS(){
+        navigationItem.title = "Search"
         let screenWidth = view.frame.size.width
         searchBar.frame = CGRect(x: 0, y: 100, width: screenWidth, height: 40)
         searchBar.placeholder = "Enter what you look for"
