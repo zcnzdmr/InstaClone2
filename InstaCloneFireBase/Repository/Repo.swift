@@ -23,7 +23,7 @@ class Repo {
         let fifthVC = UINavigationController(rootViewController: ThirdPage())
 
         firstVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"),selectedImage: UIImage(systemName: "house.fill"))
-        secondVC.tabBarItem = UITabBarItem(title: "Add", image: UIImage(systemName: "person.line.dotted.person"), selectedImage: UIImage(systemName: "person.line.dotted.person.fill"))
+        secondVC.tabBarItem = UITabBarItem(title: "Network", image: UIImage(systemName: "person.line.dotted.person"), selectedImage: UIImage(systemName: "person.line.dotted.person.fill"))
         thirdVC.tabBarItem =  UITabBarItem(title: "Profile", image: UIImage(systemName: "person"),selectedImage: UIImage(systemName: "person.fill"))
         forthVC.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass.circle"), selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
         fifthVC.tabBarItem = UITabBarItem(title: "Add", image: UIImage(systemName: "video"), selectedImage: UIImage(systemName: "video.fill"))

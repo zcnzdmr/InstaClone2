@@ -7,6 +7,8 @@
 
 import UIKit
 import FirebaseStorage
+import FirebaseFirestore
+import FirebaseAuth
 
 class ThirdPage: UIViewController {
     
@@ -27,6 +29,7 @@ class ThirdPage: UIViewController {
         view.backgroundColor = .white
         let screenWidth = view.frame.size.width
         imageViewm.frame = CGRect(x: 10, y: 120, width: screenWidth - 20, height: 300)
+        imageViewm.image = UIImage(named: "selectPhoto")
         imageViewm.layer.borderWidth = 0.6
         imageViewm.layer.cornerRadius = 6
         view.addSubview(imageViewm)
@@ -83,19 +86,37 @@ class ThirdPage: UIViewController {
                             self.alertt(title: "Error", message: error?.localizedDescription ?? "Url alma hatasi")
                         }else{
                             if let imageUrl = url?.absoluteString {
-                                print(imageUrl)
+
+                                //Firebase FireStore data kaydetme kısmı
+                                
+                                let db = Firestore.firestore()
+                                let dataDict : [String:Any] = ["comment"   : self.textFieldm.text!,
+                                                               "date"      : FieldValue.serverTimestamp(),
+                                                               "like"      : 0,
+                                                               "imageUrl"  : imageUrl,
+                                                               "postedBy"  : Auth.auth().currentUser!.email!]
+                                
+                                db.collection("Posts").addDocument(data: dataDict) { error in
+                                    if error != nil {
+                                        self.alertt(title: "Error", message: error?.localizedDescription ?? "firestore saving error")
+                                    }else{
+                                        self.imageViewm.image = UIImage(named: "selectPhoto")
+                                        self.textFieldm.text = ""
+                                        self.tabBarController?.selectedIndex = 0
+                                        
+                                    }
+                                    
+                                }
                             }
                         }
                     }
+                    
                 }
-                
             }
+            
         }
         
-        
     }
-    
-    
 }
 
 extension ThirdPage : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -103,15 +124,15 @@ extension ThirdPage : UIImagePickerControllerDelegate, UINavigationControllerDel
     @objc func showImagePickerController() {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
-//        imagePickerController.sourceType = .photoLibrary
+        //        imagePickerController.sourceType = .photoLibrary
         imagePickerController.allowsEditing = true
         present(imagePickerController, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-       if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-           imageViewm.image = editedImage
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            imageViewm.image = editedImage
         }
         dismiss(animated: true)
     }

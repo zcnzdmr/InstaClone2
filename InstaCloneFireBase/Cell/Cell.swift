@@ -10,6 +10,7 @@ import UIKit
 class Cell: UITableViewCell {
     
     var imageViewm = UIImageView()
+    var imageProfile = UIImageView()
     var label1 = UILabel()
     var buton1 = UIButton()
     var buton3 = UIButton()
@@ -17,6 +18,7 @@ class Cell: UITableViewCell {
     var buton4 = UIButton()
     var buton5 = UIButton()
     var label2 = UILabel()
+    var label3 = UILabel()
 
 
     override func awakeFromNib() {
@@ -31,13 +33,22 @@ class Cell: UITableViewCell {
     
     func setUpCellUI() {
         
-        label1.frame = CGRect(x: 20, y: 5, width: 283, height: 30)
-//        label1.layer.borderWidth = 0.1
+        label1.frame = CGRect(x: 60, y: 5, width: 283, height: 30)
+//        label1.layer.borderWidth = 1
         label1.layer.cornerRadius = 7
         addSubview(label1)
         
         
-        imageViewm.frame = CGRect(x: 20, y: 40, width: 353, height: 200)
+        imageProfile.frame = CGRect(x: 10, y: 1, width: 40, height: 40)
+        imageProfile.layer.borderWidth = 1
+//        imageProfile.layer.masksToBounds = false
+        imageProfile.layer.cornerRadius = imageProfile.frame.size.width / 2
+        imageProfile.image = UIImage(named: "_")
+        imageProfile.layer.borderColor = UIColor.white.cgColor
+        imageProfile.clipsToBounds = true
+        addSubview(imageProfile)
+        
+        imageViewm.frame = CGRect(x: 20, y: 50, width: 353, height: 200)
         imageViewm.layer.borderWidth = 0.6
         imageViewm.layer.cornerRadius = 10
         addSubview(imageViewm)
@@ -66,6 +77,12 @@ class Cell: UITableViewCell {
         label2.layer.borderWidth = 0.3
         label2.layer.cornerRadius = 7
         addSubview(label2)
+        
+        label3.frame = CGRect(x: 280, y: 255, width: 50, height: 30)
+        label3.textAlignment = .center
+        label3.layer.borderWidth = 0.3
+        label3.layer.cornerRadius = 7
+        addSubview(label3)
 
     }
 }
