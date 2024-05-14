@@ -18,7 +18,6 @@ class SignPage: UIViewController {
     var viewImage = UIImageView()
     var viewModelNesnesi = SigninVM()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
