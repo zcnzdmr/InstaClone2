@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0D8EECC5C7136172A852A20A /* Pods_InstaCloneFireBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EE98D72F99265F28EFC80E /* Pods_InstaCloneFireBase.framework */; };
+		F543967D2BF398F100E82D36 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F543967C2BF398F100E82D36 /* SearchCell.swift */; };
 		F5776EBC2BEA31BF00C07002 /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5776EBB2BEA31BF00C07002 /* SecondPage.swift */; };
 		F5776EBE2BEA32F500C07002 /* SignPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5776EBD2BEA32F500C07002 /* SignPage.swift */; };
-		F58E3A2B2BF3467D0007E4C0 /* CollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58E3A2A2BF3467D0007E4C0 /* CollectCell.swift */; };
+		F58E3A2B2BF3467D0007E4C0 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58E3A2A2BF3467D0007E4C0 /* ProfileCell.swift */; };
 		F5998E362BE9009B00662FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5998E352BE9009B00662FCE /* AppDelegate.swift */; };
 		F5998E382BE9009B00662FCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5998E372BE9009B00662FCE /* SceneDelegate.swift */; };
 		F5998E3A2BE9009B00662FCE /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5998E392BE9009B00662FCE /* HomePage.swift */; };
@@ -21,7 +22,7 @@
 		F5CD3EEF2BEB8DBC00E6ED3C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EEE2BEB8DBC00E6ED3C /* Repo.swift */; };
 		F5CD3EF22BEB8EA400E6ED3C /* SigninVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF12BEB8EA400E6ED3C /* SigninVM.swift */; };
 		F5CD3EF42BEB90B400E6ED3C /* ThirdPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF32BEB90B400E6ED3C /* ThirdPage.swift */; };
-		F5CD3EF72BEB968A00E6ED3C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF62BEB968A00E6ED3C /* Cell.swift */; };
+		F5CD3EF72BEB968A00E6ED3C /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF62BEB968A00E6ED3C /* HomeCell.swift */; };
 		F5FECF982BECB34D00B15C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5FECF972BECB34D00B15C39 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -29,9 +30,10 @@
 		08EE98D72F99265F28EFC80E /* Pods_InstaCloneFireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaCloneFireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A87B99786EA7FC2290A079 /* Pods-InstaCloneFireBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaCloneFireBase.debug.xcconfig"; path = "Target Support Files/Pods-InstaCloneFireBase/Pods-InstaCloneFireBase.debug.xcconfig"; sourceTree = "<group>"; };
 		E3B37755C964690E27D3BD59 /* Pods-InstaCloneFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaCloneFireBase.release.xcconfig"; path = "Target Support Files/Pods-InstaCloneFireBase/Pods-InstaCloneFireBase.release.xcconfig"; sourceTree = "<group>"; };
+		F543967C2BF398F100E82D36 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		F5776EBB2BEA31BF00C07002 /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
 		F5776EBD2BEA32F500C07002 /* SignPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPage.swift; sourceTree = "<group>"; };
-		F58E3A2A2BF3467D0007E4C0 /* CollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectCell.swift; sourceTree = "<group>"; };
+		F58E3A2A2BF3467D0007E4C0 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		F5998E322BE9009B00662FCE /* InstaCloneFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCloneFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5998E352BE9009B00662FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5998E372BE9009B00662FCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +46,7 @@
 		F5CD3EEE2BEB8DBC00E6ED3C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		F5CD3EF12BEB8EA400E6ED3C /* SigninVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVM.swift; sourceTree = "<group>"; };
 		F5CD3EF32BEB90B400E6ED3C /* ThirdPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPage.swift; sourceTree = "<group>"; };
-		F5CD3EF62BEB968A00E6ED3C /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		F5CD3EF62BEB968A00E6ED3C /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		F5FECF972BECB34D00B15C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,8 +137,9 @@
 		F5CD3EF52BEB966A00E6ED3C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F5CD3EF62BEB968A00E6ED3C /* Cell.swift */,
-				F58E3A2A2BF3467D0007E4C0 /* CollectCell.swift */,
+				F5CD3EF62BEB968A00E6ED3C /* HomeCell.swift */,
+				F543967C2BF398F100E82D36 /* SearchCell.swift */,
+				F58E3A2A2BF3467D0007E4C0 /* ProfileCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F543967D2BF398F100E82D36 /* SearchCell.swift in Sources */,
 				F5776EBC2BEA31BF00C07002 /* SecondPage.swift in Sources */,
 				F5998E3A2BE9009B00662FCE /* HomePage.swift in Sources */,
 				F5998E4E2BE910FA00662FCE /* FivePage.swift in Sources */,
@@ -273,9 +277,9 @@
 				F5CD3EF22BEB8EA400E6ED3C /* SigninVM.swift in Sources */,
 				F5998E4C2BE9040400662FCE /* FourPage.swift in Sources */,
 				F5998E362BE9009B00662FCE /* AppDelegate.swift in Sources */,
-				F5CD3EF72BEB968A00E6ED3C /* Cell.swift in Sources */,
+				F5CD3EF72BEB968A00E6ED3C /* HomeCell.swift in Sources */,
 				F5998E382BE9009B00662FCE /* SceneDelegate.swift in Sources */,
-				F58E3A2B2BF3467D0007E4C0 /* CollectCell.swift in Sources */,
+				F58E3A2B2BF3467D0007E4C0 /* ProfileCell.swift in Sources */,
 				F5776EBE2BEA32F500C07002 /* SignPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

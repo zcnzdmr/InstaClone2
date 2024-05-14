@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectCell: UICollectionViewCell {
+class ProfileCell: UICollectionViewCell {
     
     let imageView: UIImageView = {
         let imageView = UIImageView()

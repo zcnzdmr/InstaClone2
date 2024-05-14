@@ -39,7 +39,7 @@ class SignPage: UIViewController {
     private func setUpUIS() {
         
         let screenWidth = view.frame.size.width
-        print(screenWidth)
+        
         viewImage.frame = view.bounds
         viewImage.image = UIImage(named: "bugs")
         view.addSubview(viewImage)

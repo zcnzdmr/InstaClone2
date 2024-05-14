@@ -7,12 +7,16 @@ class FivePage: UIViewController {
     
     var imagem1 = UIImageView()
     var profileImage = UIImageView()
-    var buton = UIButton()
+    var buton1 = UIButton()
+    var buton2 = UIButton()
+    var buton3 = UIButton()
     var followersLabel = UILabel()
     var followingsLabel = UILabel()
     var nameLabel = UILabel()
     var followersitself = UILabel()
     var followingitself = UILabel()
+    var ageLabel = UILabel()
+    var jobLabel = UILabel()
     
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
@@ -28,8 +32,9 @@ class FivePage: UIViewController {
         let rightButon = UIBarButtonItem(image: UIImage(systemName: "increase.indent"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(ayarlar))
         rightButon.tintColor = .black
         self.navigationItem.rightBarButtonItem = rightButon
-        let leftButon = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(signOut))
+//        let leftButon = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(signOut))
 //        let leftButon = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(signOut))
+        let leftButon = UIBarButtonItem(image: UIImage(systemName: "bell"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(signOut))
         leftButon.tintColor = .black
         self.navigationItem.leftBarButtonItem = leftButon
     }
@@ -43,22 +48,23 @@ class FivePage: UIViewController {
         // Layout nesnesini oluşturma kısmı
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        layout.sectionInset = UIEdgeInsets(top: 1, left: 2, bottom: 1, right: 2)
         layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = 1
         
         // UICollectionView'i layout ile başlatın
-        collectionView = UICollectionView(frame: CGRect(x: 0, y: 375, width: screenWidth, height: (screenHeight - 325)), collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: CGRect(x: 0, y: 400, width: screenWidth, height: (screenHeight - 325)), collectionViewLayout: layout)
         collectionView.layer.borderWidth = 0.7
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(CollectCell.self, forCellWithReuseIdentifier: "hucre")
+        collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: "hucre")
         
         view.addSubview(collectionView)
     }
     
     func setUpUIs() {
         navigationItem.title = "Profile"
+        view.backgroundColor = .systemBackground
         
         followersLabel.frame = CGRect(x: 23, y: 225, width: 80, height: 30)
         followersLabel.textAlignment = .center
@@ -95,6 +101,23 @@ class FivePage: UIViewController {
         nameLabel.text = "Özcan ÖZDEMİR"
         view.addSubview(nameLabel)
         
+        ageLabel.frame = CGRect(x: 115, y: 325, width: 50, height: 30)
+        ageLabel.font = UIFont(name: "Papyrus", size: 13)
+        ageLabel.textAlignment = .left
+//        ageLabel.layer.borderWidth = 1
+        ageLabel.textColor = UIColor.gray
+        ageLabel.text = "30 yo."
+        view.addSubview(ageLabel)
+        
+        jobLabel.frame = CGRect(x: 165, y: 325, width: 150, height: 30)
+        jobLabel.font = UIFont(name: "Papyrus", size: 13)
+        jobLabel.textAlignment = .left
+//        jobLabel.layer.borderWidth = 1
+        jobLabel.textColor = UIColor.gray
+        jobLabel.text = "Geomatic Engineer"
+        view.addSubview(jobLabel)
+
+        
         imagem1.frame = CGRect(x: 0, y: 0, width: screenWidth , height: 220)
         imagem1.layer.borderWidth = 0.4
         imagem1.clipsToBounds = true
@@ -104,20 +127,41 @@ class FivePage: UIViewController {
         profileImage.frame = CGRect(x: (screenWidth - 140) / 2, y: 150, width: 140, height: 140)
         profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
         profileImage.clipsToBounds = true
-        profileImage.layer.borderWidth = 5
+        profileImage.layer.borderWidth = 3
+        profileImage.layer.borderColor = UIColor.lightGray.cgColor
         profileImage.image = UIImage(named: "siay2")
-        profileImage.layer.borderColor = UIColor.white.cgColor
         view.addSubview(profileImage)
         
-//        view.backgroundColor = .white
-//        buton.frame = CGRect(x: 10, y: screenHeight - 140 , width: screenWidth - 20, height: 40)
-//        buton.setTitle("Sign Out", for: UIControl.State.normal)
-//        buton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-//        buton.backgroundColor = .orange
-//        buton.layer.borderWidth = 0.5
-//        buton.layer.cornerRadius = 7
-//        buton.addTarget(self, action: #selector(signOut), for: UIControl.Event.touchUpInside)
-//        view.addSubview(buton)
+        view.backgroundColor = .white
+        buton1.frame = CGRect(x: 2, y: 365, width: (screenWidth - 7) / 3, height: 35)
+        buton1.setImage(UIImage(systemName: "camera.badge.clock"), for: .normal)
+        buton1.tintColor = .black
+//        buton1.layer.borderWidth = 0.5
+//        buton1.layer.cornerRadius = 7
+        buton1.addTarget(self, action: #selector(signOut), for: UIControl.Event.touchUpInside)
+        view.addSubview(buton1)
+        
+        
+        view.backgroundColor = .white
+        buton2.frame = CGRect(x: 133, y: 365, width: (screenWidth - 7) / 3, height: 35)
+        buton2.setImage(UIImage(systemName: "square.grid.3x3"), for: UIControl.State.normal)
+        buton2.tintColor = .black
+//        buton2.setTitleColor(UIColor.white, for: UIControl.State.normal)
+//        buton2.backgroundColor = .orange
+//        buton2.layer.borderWidth = 0.5
+//        buton2.layer.cornerRadius = 7
+        buton2.addTarget(self, action: #selector(signOut), for: UIControl.Event.touchUpInside)
+        view.addSubview(buton2)
+        
+        view.backgroundColor = .white
+        buton3.frame = CGRect(x: 264, y: 365, width: (screenWidth - 7) / 3, height: 35)
+        buton3.setImage(UIImage(systemName: "person.2"), for: UIControl.State.normal)
+        buton3.tintColor = .black
+//        buton3.backgroundColor = .orange
+//        buton3.layer.borderWidth = 0.5
+//        buton3.layer.cornerRadius = 7
+        buton3.addTarget(self, action: #selector(signOut), for: UIControl.Event.touchUpInside)
+        view.addSubview(buton3)
     }
     
     @objc func signOut() {
@@ -136,13 +180,13 @@ extension FivePage: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hucre", for: indexPath) as! CollectCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hucre", for: indexPath) as! ProfileCell
         cell.backgroundColor = .white
         cell.imageView.image = UIImage(named: "_") // Hücre içeriği ayarlama
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (screenWidth - 13 ) / 3, height: (screenWidth - 13 ) / 3) // Örnek hücre boyutu
+        return CGSize(width: (screenWidth - 7 ) / 3, height: (screenWidth - 7 ) / 3) // Örnek hücre boyutu
     }
 }

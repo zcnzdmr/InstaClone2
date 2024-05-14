@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class Repo {
+class Repo  {
     
     func gecis() {
         
@@ -29,6 +29,7 @@ class Repo {
         fifthVC.tabBarItem = UITabBarItem(title: "Add", image: UIImage(systemName: "video"), selectedImage: UIImage(systemName: "video.fill"))
 
         tabbar.viewControllers = [firstVC,forthVC,fifthVC, secondVC,thirdVC ]
+//        tabbar.tabBar.backgroundColor = UIColor.systemOrange
         appDelegate.window?.rootViewController = tabbar
     }
 }

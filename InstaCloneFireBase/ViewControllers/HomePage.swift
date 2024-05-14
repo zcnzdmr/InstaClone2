@@ -24,6 +24,7 @@ class HomePage: UIViewController {
         setupUI()
         barButton()
         getDataFromFireStore()
+        
       }
     
     func barButton() {
@@ -36,14 +37,18 @@ class HomePage: UIViewController {
     
 
       func setupUI(){
-//        view.backgroundColor = .white
+          view.backgroundColor = .white
+          
+          //tabbarItemların rengini değiştiren kısmı
+          tabBarController?.view.tintColor = .black
+//          tabBarController?.tabBar.backgroundColor = UIColor.systemOrange
+          
           navigationItem.title = "Instagram Clone"
-          navigationItem.titleView?.tintColor = UIColor.systemOrange
           tableView.frame = view.bounds
-          tableView.rowHeight = CGFloat(350)
+          tableView.rowHeight = CGFloat(450)
           tableView.delegate = self
           tableView.dataSource = self
-          tableView.register(Cell.self, forCellReuseIdentifier: "hucrem")
+          tableView.register(HomeCell.self, forCellReuseIdentifier: "hucrem")
           view.addSubview(tableView)
 
       }
@@ -112,7 +117,7 @@ extension HomePage : UITableViewDelegate, UITableViewDataSource, HucreProtokol {
         return userEmailArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "hucrem", for: indexPath) as! Cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "hucrem", for: indexPath) as! HomeCell
         
         cell.imageViewm.image = UIImage(named: "_")
         cell.label3.text = String(self.likeArray[indexPath.row])
