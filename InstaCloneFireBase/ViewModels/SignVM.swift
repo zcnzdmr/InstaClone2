@@ -8,7 +8,7 @@
 import Foundation
 
 
-class SigninVM {
+class SignVM {
     var repoNesnesi = Repo()
     
     func gecis() {

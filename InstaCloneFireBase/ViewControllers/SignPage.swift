@@ -16,7 +16,7 @@ class SignPage: UIViewController {
     var signInButon = UIButton()
     var signUpButon = UIButton()
     var viewImage = UIImageView()
-    var viewModelNesnesi = SigninVM()
+    var viewModelNesnesi = SignVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +95,7 @@ class SignPage: UIViewController {
                 if Error != nil {
                     self.alertt(title: "Error", message: Error?.localizedDescription ?? "Error")
                 }else{
-                    SigninVM().gecis()
+                    SignVM().gecis()
                     self.navigationController?.pushViewController(HomePage(), animated: true)
                 }
             }
@@ -115,7 +115,7 @@ class SignPage: UIViewController {
                 if error != nil {
                     self.alertt(title: "Error", message: error?.localizedDescription ?? "Error")
                 }else {
-                    SigninVM().gecis()
+                    SignVM().gecis()
                     //                    self.navigationController?.pushViewController(HomePage(), animated: true)
                 }
             }

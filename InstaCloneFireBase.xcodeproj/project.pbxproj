@@ -20,9 +20,10 @@
 		F5998E4C2BE9040400662FCE /* FourPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5998E4B2BE9040400662FCE /* FourPage.swift */; };
 		F5998E4E2BE910FA00662FCE /* FivePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5998E4D2BE910FA00662FCE /* FivePage.swift */; };
 		F5CD3EEF2BEB8DBC00E6ED3C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EEE2BEB8DBC00E6ED3C /* Repo.swift */; };
-		F5CD3EF22BEB8EA400E6ED3C /* SigninVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF12BEB8EA400E6ED3C /* SigninVM.swift */; };
+		F5CD3EF22BEB8EA400E6ED3C /* SignVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF12BEB8EA400E6ED3C /* SignVM.swift */; };
 		F5CD3EF42BEB90B400E6ED3C /* ThirdPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF32BEB90B400E6ED3C /* ThirdPage.swift */; };
 		F5CD3EF72BEB968A00E6ED3C /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD3EF62BEB968A00E6ED3C /* HomeCell.swift */; };
+		F5ED667E2BF49B6A00FB23A6 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ED667D2BF49B6A00FB23A6 /* HomeVM.swift */; };
 		F5FECF982BECB34D00B15C39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5FECF972BECB34D00B15C39 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -44,9 +45,10 @@
 		F5998E4B2BE9040400662FCE /* FourPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPage.swift; sourceTree = "<group>"; };
 		F5998E4D2BE910FA00662FCE /* FivePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivePage.swift; sourceTree = "<group>"; };
 		F5CD3EEE2BEB8DBC00E6ED3C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
-		F5CD3EF12BEB8EA400E6ED3C /* SigninVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVM.swift; sourceTree = "<group>"; };
+		F5CD3EF12BEB8EA400E6ED3C /* SignVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignVM.swift; sourceTree = "<group>"; };
 		F5CD3EF32BEB90B400E6ED3C /* ThirdPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPage.swift; sourceTree = "<group>"; };
 		F5CD3EF62BEB968A00E6ED3C /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		F5ED667D2BF49B6A00FB23A6 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		F5FECF972BECB34D00B15C39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +131,8 @@
 		F5CD3EF02BEB8E7700E6ED3C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				F5CD3EF12BEB8EA400E6ED3C /* SigninVM.swift */,
+				F5CD3EF12BEB8EA400E6ED3C /* SignVM.swift */,
+				F5ED667D2BF49B6A00FB23A6 /* HomeVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -274,9 +277,10 @@
 				F5998E4E2BE910FA00662FCE /* FivePage.swift in Sources */,
 				F5CD3EEF2BEB8DBC00E6ED3C /* Repo.swift in Sources */,
 				F5CD3EF42BEB90B400E6ED3C /* ThirdPage.swift in Sources */,
-				F5CD3EF22BEB8EA400E6ED3C /* SigninVM.swift in Sources */,
+				F5CD3EF22BEB8EA400E6ED3C /* SignVM.swift in Sources */,
 				F5998E4C2BE9040400662FCE /* FourPage.swift in Sources */,
 				F5998E362BE9009B00662FCE /* AppDelegate.swift in Sources */,
+				F5ED667E2BF49B6A00FB23A6 /* HomeVM.swift in Sources */,
 				F5CD3EF72BEB968A00E6ED3C /* HomeCell.swift in Sources */,
 				F5998E382BE9009B00662FCE /* SceneDelegate.swift in Sources */,
 				F58E3A2B2BF3467D0007E4C0 /* ProfileCell.swift in Sources */,

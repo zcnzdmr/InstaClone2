@@ -14,7 +14,7 @@ class SearchCell: UICollectionViewCell {
     func setUIS() {
         
         imageViewm.frame = contentView.bounds
-        imageViewm.layer.borderWidth = 0.7
+        imageViewm.layer.borderWidth = 0.3
         contentView.addSubview(imageViewm)
     }
     

@@ -94,7 +94,7 @@ class HomeCell: UITableViewCell {
         addSubview(buton5)
         
         label2.frame = CGRect(x: 10, y: 370, width: 373, height: 60)
-        label2.layer.borderWidth = 0.5
+//        label2.layer.borderWidth = 0.5
         label2.numberOfLines = 0
 //        label2.sizeToFit()
 //        label2.layer.borderColor = UIColor.gray.cgColor

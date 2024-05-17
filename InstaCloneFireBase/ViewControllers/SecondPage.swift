@@ -9,6 +9,7 @@ import UIKit
 
 class SecondPage: UIViewController {
     
+    var imageURLList = [String]()
     var searchBar = UISearchBar()
     var collectionViewm : UICollectionView!
     

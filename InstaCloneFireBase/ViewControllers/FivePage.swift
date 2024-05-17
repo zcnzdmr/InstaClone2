@@ -1,9 +1,14 @@
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
+import SDWebImage
+
 
 class FivePage: UIViewController {
-
+    
     var collectionView: UICollectionView!
+    var userImageArray = [String]()
+    var documentIDArray = [String]()
     
     var imagem1 = UIImageView()
     var profileImage = UIImageView()
@@ -26,19 +31,20 @@ class FivePage: UIViewController {
         setUpUIs()
         barButonItem()
         collectionViewFonk()
+        getData()
     }
     
     func barButonItem() {
         let rightButon = UIBarButtonItem(image: UIImage(systemName: "increase.indent"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(ayarlar))
         rightButon.tintColor = .black
         self.navigationItem.rightBarButtonItem = rightButon
-//        let leftButon = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(signOut))
-//        let leftButon = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(signOut))
+        //        let leftButon = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(signOut))
+        //        let leftButon = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(signOut))
         let leftButon = UIBarButtonItem(image: UIImage(systemName: "bell"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(signOut))
         leftButon.tintColor = .black
         self.navigationItem.leftBarButtonItem = leftButon
     }
-
+    
     @objc func ayarlar() {
         print("ayarlar sayfasına gidildi")
     }
@@ -104,7 +110,7 @@ class FivePage: UIViewController {
         ageLabel.frame = CGRect(x: 115, y: 325, width: 50, height: 30)
         ageLabel.font = UIFont(name: "Papyrus", size: 13)
         ageLabel.textAlignment = .left
-//        ageLabel.layer.borderWidth = 1
+        //        ageLabel.layer.borderWidth = 1
         ageLabel.textColor = UIColor.gray
         ageLabel.text = "30 yo."
         view.addSubview(ageLabel)
@@ -112,11 +118,11 @@ class FivePage: UIViewController {
         jobLabel.frame = CGRect(x: 165, y: 325, width: 150, height: 30)
         jobLabel.font = UIFont(name: "Papyrus", size: 13)
         jobLabel.textAlignment = .left
-//        jobLabel.layer.borderWidth = 1
+        //        jobLabel.layer.borderWidth = 1
         jobLabel.textColor = UIColor.gray
         jobLabel.text = "Geomatic Engineer"
         view.addSubview(jobLabel)
-
+        
         
         imagem1.frame = CGRect(x: 0, y: 0, width: screenWidth , height: 220)
         imagem1.layer.borderWidth = 0.4
@@ -136,8 +142,8 @@ class FivePage: UIViewController {
         buton1.frame = CGRect(x: 2, y: 365, width: (screenWidth - 7) / 3, height: 35)
         buton1.setImage(UIImage(systemName: "camera.badge.clock"), for: .normal)
         buton1.tintColor = .black
-//        buton1.layer.borderWidth = 0.5
-//        buton1.layer.cornerRadius = 7
+        //        buton1.layer.borderWidth = 0.5
+        //        buton1.layer.cornerRadius = 7
         buton1.addTarget(self, action: #selector(signOut), for: UIControl.Event.touchUpInside)
         view.addSubview(buton1)
         
@@ -146,10 +152,10 @@ class FivePage: UIViewController {
         buton2.frame = CGRect(x: 133, y: 365, width: (screenWidth - 7) / 3, height: 35)
         buton2.setImage(UIImage(systemName: "square.grid.3x3"), for: UIControl.State.normal)
         buton2.tintColor = .black
-//        buton2.setTitleColor(UIColor.white, for: UIControl.State.normal)
-//        buton2.backgroundColor = .orange
-//        buton2.layer.borderWidth = 0.5
-//        buton2.layer.cornerRadius = 7
+        //        buton2.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        //        buton2.backgroundColor = .orange
+        //        buton2.layer.borderWidth = 0.5
+        //        buton2.layer.cornerRadius = 7
         buton2.addTarget(self, action: #selector(signOut), for: UIControl.Event.touchUpInside)
         view.addSubview(buton2)
         
@@ -157,9 +163,9 @@ class FivePage: UIViewController {
         buton3.frame = CGRect(x: 264, y: 365, width: (screenWidth - 7) / 3, height: 35)
         buton3.setImage(UIImage(systemName: "person.2"), for: UIControl.State.normal)
         buton3.tintColor = .black
-//        buton3.backgroundColor = .orange
-//        buton3.layer.borderWidth = 0.5
-//        buton3.layer.cornerRadius = 7
+        //        buton3.backgroundColor = .orange
+        //        buton3.layer.borderWidth = 0.5
+        //        buton3.layer.cornerRadius = 7
         buton3.addTarget(self, action: #selector(signOut), for: UIControl.Event.touchUpInside)
         view.addSubview(buton3)
     }
@@ -172,17 +178,49 @@ class FivePage: UIViewController {
             print("Hata")
         }
     }
+    
+    func getData() {
+        let db = Firestore.firestore()
+        db.collection("ProfilePicture")/*.order(by: "date", descending: true)*/.addSnapshotListener { snapShot, error in
+            if error != nil {
+                print(error?.localizedDescription ?? "record pulling error")
+            }else{
+                if snapShot?.isEmpty != true {
+                    
+                    self.userImageArray.removeAll()
+                    
+                    for document in snapShot!.documents {
+                        if let imageUrl = document.get("url") as? String {
+                            self.userImageArray.append(imageUrl)
+                        }
+                    }
+                }
+                
+            }
+            self.collectionView.reloadData()
+        }
+    }
 }
+
+
+
+
 
 extension FivePage: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return userImageArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hucre", for: indexPath) as! ProfileCell
         cell.backgroundColor = .white
-        cell.imageView.image = UIImage(named: "_") // Hücre içeriği ayarlama
+        //        cell.imageView.image = UIImage(named: "_") // Hücre içeriği ayarlama
+        if let url = URL(string: self.userImageArray[indexPath.row]) {
+            DispatchQueue.main.async {
+                cell.imageView.sd_setImage(with: url)
+                
+            }
+        }
         return cell
     }
     
