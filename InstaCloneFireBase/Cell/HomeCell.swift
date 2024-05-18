@@ -101,11 +101,12 @@ class HomeCell: UITableViewCell {
         label2.layer.cornerRadius = 7
         addSubview(label2)
         
-        label3.frame = CGRect(x: 310, y: 335, width: 30, height: 30)
-        label3.layer.cornerRadius = 15
-        label3.layer.borderColor = UIColor.orange.cgColor
-        label3.textAlignment = .center
-        label3.layer.borderWidth = 0.8
+        label3.frame = CGRect(x: 295, y: 335, width: 45, height: 30)
+//        label3.layer.cornerRadius = 15
+//        label3.layer.borderColor = UIColor.orange.cgColor
+        label3.textColor = UIColor.systemOrange
+        label3.textAlignment = .left
+//        label3.layer.borderWidth = 0.8
         addSubview(label3)
 
     }

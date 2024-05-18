@@ -120,7 +120,7 @@ extension HomePage : UITableViewDelegate, UITableViewDataSource, HucreProtokol {
         let cell = tableView.dequeueReusableCell(withIdentifier: "hucrem", for: indexPath) as! HomeCell
         
         cell.imageViewm.image = UIImage(named: "_")
-        cell.label3.text = String(self.likeArray[indexPath.row])
+        cell.label3.text = "♥ \(self.likeArray[indexPath.row])"
         cell.label1.text = userEmailArray[indexPath.row]
         cell.label2.text = " \(userCommentArray[indexPath.row])"
         

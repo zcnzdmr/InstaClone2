@@ -76,7 +76,7 @@ class FivePage: UIViewController {
         followersLabel.textAlignment = .center
         followersLabel.textColor = UIColor.systemOrange
         followersLabel.font = UIFont(name: "Chalkduster", size: 17)
-        followersLabel.text = "1"
+        followersLabel.text = "1119"
         view.addSubview(followersLabel)
         
         followersitself.frame = CGRect(x: 3, y: 252, width: 120, height: 30)

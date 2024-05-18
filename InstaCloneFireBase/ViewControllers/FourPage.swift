@@ -12,17 +12,13 @@ class FourPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        navigationItem.title = "Network"
       }
 
       func setupUI(){
         view.backgroundColor = .white
 
-        let profileLabel: UILabel = {
-          let label = UILabel()
-          label.translatesAutoresizingMaskIntoConstraints = false
-          label.text = "This is profile screen"
-          return label
-        }()
+       
 
         let profileButton: UIButton = {
           let button = UIButton()
@@ -35,7 +31,6 @@ class FourPage: UIViewController {
         }()
 
         view.addSubview(profileButton)
-        view.addSubview(profileLabel)
 
         NSLayoutConstraint.activate([
             profileButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),

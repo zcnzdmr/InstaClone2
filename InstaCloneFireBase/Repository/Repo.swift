@@ -16,6 +16,12 @@ class Repo  {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let tabbar = UITabBarController()
         
+//        let firstVC = HomePage()
+//        let secondVC = SecondPage()
+//        let thirdVC = ThirdPage()
+//        let forthVC = FourPage()
+//        let fifthVC = FivePage()
+        
         let firstVC = UINavigationController(rootViewController: HomePage())
         let secondVC = UINavigationController(rootViewController: FourPage())
         let thirdVC = UINavigationController(rootViewController: FivePage())
