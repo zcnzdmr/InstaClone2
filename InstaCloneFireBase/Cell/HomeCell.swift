@@ -39,6 +39,7 @@ class HomeCell: UITableViewCell {
         setUpCellUI()
     }
     
+    // MARK: nesneleri oluşturma
     func setUpCellUI() {
         
         label1.frame = CGRect(x: 60, y: 5, width: 283, height: 30)
@@ -102,20 +103,18 @@ class HomeCell: UITableViewCell {
         addSubview(label2)
         
         label3.frame = CGRect(x: 295, y: 335, width: 45, height: 30)
-//        label3.layer.cornerRadius = 15
-//        label3.layer.borderColor = UIColor.orange.cgColor
         label3.textColor = UIColor.systemOrange
         label3.textAlignment = .left
-//        label3.layer.borderWidth = 0.8
         addSubview(label3)
 
     }
     
+    // MARK: objc fonksiyonları
     @objc func likeFonk() {
         protokolNesnesi?.tiklandi(indexPath: indexNesnesi!)
     }
     
-    //buton basma efekti fonksiyonları
+    
     
     @objc func buttonTouchDown(_ sender: UIButton) {
         UIView.animate(withDuration: 0.2) {
