@@ -30,6 +30,7 @@ class SignPage: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated: true)
 // buraya tabbarı kaybetmek için kod yazılabilir
     }
     

@@ -23,6 +23,7 @@ class ThirdPage: UIViewController {
         gestureFonk()
         // Do any additional setup after loading the view.
     }
+
     
     private func setUpUIS() {
         

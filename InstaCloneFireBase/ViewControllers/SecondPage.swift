@@ -22,6 +22,11 @@ class SecondPage: UIViewController {
         setUpUIS()
         collectionViewFonk()
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+    }
 
     
     func setUpUIS(){
@@ -74,6 +79,20 @@ extension SecondPage : UICollectionViewDelegate, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (screenWidth - 4 ) / 3, height: (screenWidth - 4 ) / 3)
     }
+}
+
+extension SecondPage : UIScrollViewDelegate {
     
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+               if offsetY > 50 {
+                   UIView.animate(withDuration: 0.3) {
+                       self.searchBar.alpha = 0
+                   }
+               } else {
+                   UIView.animate(withDuration: 0.3) {
+                       self.searchBar.alpha = 1
+                   }
+               }
+    }
 }
